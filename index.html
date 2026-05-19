@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandhy González — Marketing Content Manager</title>
+  <meta name="description" content="Portafolio profesional de Sandhy J. González M. — Marketing Content Manager con 14 años de experiencia en LATAM y EE.UU." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0d0d;
+      --bg2:       #111111;
+      --bg3:       #1a1a1a;
+      --bg4:       #222222;
+      --gold:      #c9a96e;
+      --gold-dim:  #8a6f42;
+      --white:     #ffffff;
+      --light:     #cccccc;
+      --mid:       #888888;
+      --dark:      #444444;
+      --serif:     'Cormorant Garamond', Georgia, serif;
+      --title:     'Montserrat', system-ui, sans-serif;
+      --sans:      'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--light);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,169,110,0.15);
+    }
+    .nav-logo {
+      font-family: var(--title); font-size: 0.95rem; font-weight: 700;
+      color: var(--white); letter-spacing: 0.08em; text-decoration: none;
+    }
+
+    /* PARCHE RESPONSIVO */
+    html, body {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      flex-wrap: wrap !important;
+      height: auto !important;
+      padding: 10px 20px !important;
+    }
+
+    .nav-links {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      padding: 5px 0 !important;
+    }
+
+    @media (max-width: 900px) {
+      #hero {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      .hero-left, .hero-right {
+        width: 100% !important;
+        padding: 40px 20px !important;
+        border-right: none !important;
+      }
+      .hero-name {
+        font-size: 3rem !important;
+        text-align: center !important;
+      }
+    }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mid); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 64px;
+    }
+    .hero-left {
+      background: var(--bg2);
+      border-right: 1px solid rgba(201,169,110,0.2);
+      padding: 40px 48px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; overflow: hidden;
+    }
+    .hero-left::before {
+      content: 'S';
+      position: absolute; bottom: -60px; left: -20px;
+      font-family: var(--serif); font-size: 320px; font-weight: 700;
+      color: rgba(201,169,110,0.04); line-height: 1; pointer-events: none;
+      user-select: none;
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
+      position: relative; z-index: 2;
+    }
+    .hero-rule { width: 60px; height: 1px; background: var(--gold); margin-bottom: 24px; }
+    .hero-name {
+      font-family: var(--title); font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 800; color: var(--white); line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+    .hero-name span { display: block; }
+    .hero-title {
+      margin-top: 28px;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--mid);
+    }
+    .hero-sub {
+      font-size: 0.85rem; color: var(--light); margin-top: 6px; line-height: 1.5;
+    }
+
+    /* Stats */
+    .hero-stats {
+      display: flex; gap: 28px; margin-top: 20px;
+    }
+    .stat-block {}
+    .stat-num {
+      font-family: var(--title); font-size: 2.4rem; font-weight: 700;
+      color: var(--gold); line-height: 1;
+    }
+    .stat-label { font-size: 0.72rem; color: var(--mid); line-height: 1.3; margin-top: 4px; }
+
+    /* Contact strip */
+    .hero-contact { border-top: 1px solid var(--bg4); padding-top: 28px; }
+    .contact-item {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .contact-icon { color: var(--gold); font-size: 0.8rem; width: 14px; flex-shrink: 0; }
+    .contact-item a {
+      font-size: 0.8rem; color: var(--light); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--gold); }
+    .contact-item span { font-size: 0.8rem; color: var(--light); }
+
+    /* Hero right */
+    .hero-right {
+      padding: 40px 48px;
+      display: flex; flex-direction: column; justify-content: flex-start; gap: 20px;
+    }
+    .section-label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .section-rule {
+      width: 100%; height: 1px; background: var(--bg4); margin-bottom: 14px;
+    }
+    .bio {
+      font-size: 0.95rem; color: var(--light); line-height: 1.8;
+    }
+
+    /* Featured experience */
+    .exp-item {
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--bg4);
+    }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .exp-role { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+    .exp-period { font-size: 0.72rem; color: var(--gold); }
+    .exp-company { font-size: 0.78rem; color: var(--mid); font-style: italic; margin: 3px 0 8px; }
+    .exp-desc { font-size: 0.82rem; color: var(--light); line-height: 1.65; }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 32px 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+
+    .section-heading {
+      font-family: var(--title); font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 8px;
+    }
+    .section-heading em { color: var(--gold); font-style: normal; }
+    .section-intro { font-size: 0.88rem; color: var(--mid); margin-top: 4px; }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--bg2); }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px;
+    }
+    .skills-col {}
+    .skills-col-title {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 16px;
+    }
+    .skill-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 10px; font-size: 0.85rem; color: var(--light);
+    }
+    .skill-dash { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+
+    /* Certs */
+    .cert-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      margin-bottom: 10px; font-size: 0.85rem; color: var(--light);
+    }
+    .cert-check { color: var(--gold); }
+
+    /* Lang bars */
+    .lang-item { margin-bottom: 16px; }
+    .lang-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .lang-name { font-size: 0.85rem; font-weight: 500; color: var(--white); }
+    .lang-level { font-size: 0.75rem; color: var(--mid); }
+    .lang-bar { height: 4px; background: var(--bg4); border-radius: 2px; }
+    .lang-fill { height: 100%; background: var(--gold); border-radius: 2px; transition: width 1s ease; }
+
+    /* Sectors */
+    .sectors-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .sector-pill {
+      padding: 5px 14px; border-radius: 100px; font-size: 0.76rem;
+      background: var(--bg3); border: 1px solid var(--bg4); color: var(--light);
+    }
+
+    /* Achievements */
+    .achievement { margin-bottom: 20px; }
+    .achievement-title {
+      font-size: 0.9rem; font-weight: 500; color: var(--gold); margin-bottom: 4px;
+    }
+    .achievement-desc { font-size: 0.8rem; color: var(--mid); line-height: 1.5; }
+
+    /* Edu */
+    .edu-item { margin-bottom: 20px; }
+    .edu-degree { font-size: 0.9rem; font-weight: 500; color: var(--white); }
+    .edu-school { font-size: 0.8rem; color: var(--mid); font-style: italic; margin: 2px 0; }
+    .edu-year { font-size: 0.75rem; color: var(--gold); }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    #experience { background: var(--bg); }
+    .timeline {
+      position: relative; margin-top: 20px;
+      display: grid; grid-template-columns: 1fr 2px 1fr; gap: 0;
+    }
+    .timeline-line {
+      background: var(--bg4); position: relative;
+    }
+    .timeline-col { display: flex; flex-direction: column; gap: 0; }
+    .timeline-col.right { text-align: left; }
+
+    .tl-item {
+      position: relative; padding: 0 36px 20px;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .tl-item.visible { opacity: 1; transform: translateY(0); }
+
+    .tl-item::after {
+      content: '';
+      position: absolute; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%; background: var(--gold);
+      border: 2px solid var(--bg);
+    }
+    .tl-item.left::after { right: -6px; }
+    .tl-item.right::after { left: -6px; }
+
+    .tl-role { font-size: 0.88rem; font-weight: 600; color: var(--white); }
+    .tl-company { font-size: 0.78rem; color: var(--gold); font-style: italic; margin: 3px 0; }
+    .tl-period { font-size: 0.72rem; color: var(--mid); margin-bottom: 8px; }
+    .tl-desc { font-size: 0.8rem; color: var(--light); line-height: 1.6; }
+
+    /* ── BRANDS ── */
+    #brands { background: var(--bg2); }
+    .brands-grid {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;
+    }
+    .brand-pill {
+      padding: 8px 18px; border-radius: 6px; font-size: 0.82rem; font-weight: 500;
+      background: var(--bg3); border: 1px solid var(--bg4);
+      color: var(--light); transition: border-color 0.2s, color 0.2s;
+    }
+    .brand-pill:hover { border-color: var(--gold-dim); color: var(--white); }
+
+    .countries-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .country-pill {
+      padding: 6px 16px; border-radius: 100px; font-size: 0.8rem;
+      border: 1px solid var(--gold-dim); color: var(--light);
+      background: transparent;
+    }
+
+    /* Premio box */
+    .premio-box {
+      margin-top: 14px; padding: 20px 28px;
+      border: 1px solid var(--gold-dim); border-radius: 8px;
+      background: rgba(26,20,0,0.6);
+      position: relative; overflow: hidden;
+    }
+    .premio-box::before {
+      content: '🏆';
+      position: absolute; right: 32px; top: 24px; font-size: 3rem; opacity: 0.15;
+    }
+    .premio-title {
+      font-family: var(--title); font-size: 1.3rem; font-weight: 700;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    .premio-text {
+      font-size: 0.9rem; color: var(--light); line-height: 1.8; max-width: 820px;
+    }
+
+    /* ── CONTACT ── */
+    #contacto {
+      background: var(--bg);
+      min-height: 40vh; display: flex; align-items: center;
+    }
+    .contact-inner { text-align: center; }
+    .contact-big {
+      font-family: var(--title); font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 800; color: var(--white); line-height: 0.95;
+      position: relative;
+    }
+    .contact-big::after {
+      content: attr(data-text);
+      position: absolute; inset: 0;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(201,169,110,0.15);
+      transform: translate(4px, 4px);
+      z-index: -1;
+    }
+    .contact-sub {
+      font-size: 1rem; color: var(--gold); margin-top: 16px; letter-spacing: 0.05em;
+    }
+    .contact-rule {
+      width: 80px; height: 1px; background: var(--gold); margin: 24px auto;
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: auto; gap: 0;
+      justify-content: center; margin-top: 16px;
+    }
+    .contact-block {
+      padding: 16px 48px; border: 1px solid var(--bg4);
+      transition: border-color 0.2s; text-align: center;
+    }
+    .contact-block:hover { border-color: var(--gold-dim); }
+    .contact-block-label {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 8px;
+    }
+    .contact-block a, .contact-block p {
+      font-size: 0.88rem; color: var(--light); text-decoration: none;
+      display: block; transition: color 0.2s;
+    }
+    .contact-block a:hover { color: var(--white); }
+    .contact-extra {
+      margin-top: 16px; font-size: 0.8rem; color: var(--mid);
+    }
+    .contact-extra span { color: var(--gold); }
+
+    .tagline {
+      margin-top: 16px; font-family: var(--serif);
+      font-size: 1.1rem; font-style: italic; color: var(--mid);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--bg4);
+      padding: 20px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-size: 0.75rem; color: var(--dark); }
+    footer a { color: var(--gold-dim); text-decoration: none; }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 18px; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 96px 20px 40px; }
+      .hero-right { padding: 36px 20px; }
+      .skills-grid { grid-template-columns: 1fr; gap: 32px; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline-line { display: none; }
+      .tl-item { padding: 0 0 32px; }
+      .tl-item::after { display: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-block { padding: 24px 28px; }
+      .container { padding: 0 24px; }
+      footer { flex-direction: column; gap: 8px; text-align: center; }
+      .premio-box { padding: 28px 24px; }
+    }
+
+    /* ══ IMPACTO section styles ══ */
+    /* Company label */
+    .company-label { margin-bottom: 6px; }
+    .company-name-imp {
+      font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700; color: var(--white); line-height: 1;
+    }
+    .company-descriptor {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-top: 8px;
+    }
+
+    /* Unified impact grid — same card for all 3 companies */
+    .impact-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+    }
+    .impact-card {
+      background: var(--bg3);
+      border: 1px solid var(--bg4);
+      border-radius: 8px;
+      padding: 18px 22px;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .impact-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--gold);
+      transition: height 0.35s ease;
+    }
+    .impact-card:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
+    .impact-card:hover::before { height: 100%; }
+
+    .impact-card.highlight {
+      grid-column: 1 / -1;
+      background: rgba(26,20,0,0.55);
+      border-color: var(--gold-dim);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .highlight-icon {
+      font-size: 1.8rem; line-height: 1; padding-top: 4px;
+    }
+    .impact-card.highlight .card-headline { font-size: 1.4rem; }
+
+    .card-icon {
+      font-size: 1.2rem; margin-bottom: 8px; display: block; line-height: 1;
+    }
+    .card-kpi {
+      font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px;
+    }
+    .card-headline {
+      font-family: var(--title); font-size: 1.2rem; font-weight: 700;
+      color: var(--white); line-height: 1.2; margin-bottom: 8px;
+    }
+    .card-text {
+      font-size: 0.82rem; color: var(--light); line-height: 1.75;
+    }
+
+    /* Impacto page hero */
+    #impacto-hero {
+      min-height: 22vh;
+      display: flex; align-items: center;
+      background: var(--bg2);
+      border-bottom: 1px solid rgba(201,169,110,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .impacto-inner { max-width: 1200px; margin: 0 auto; padding: 28px 48px; }
+    .page-title {
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 400; color: var(--light); line-height: 1.65;
+      max-width: 680px; margin-top: 8px;
+    }
+    .page-title em { color: var(--gold); font-style: normal; }
+    .page-sub {
+      margin-top: 6px;
+      font-size: 0.82rem; color: var(--mid);
+      max-width: 580px; line-height: 1.7;
+    }
+
+    /* Impacto company sections */
+    #fapro { background: var(--bg); padding: 28px 0; }
+    #eleva { background: var(--bg2); padding: 28px 0; }
+    #teves { background: var(--bg); padding: 28px 0; }
+
+    /* Cierre slogan */
+    #cierre {
+      background: var(--bg2);
+      border-top: 1px solid rgba(201,169,110,0.12);
+      padding: 24px 0;
+      text-align: center;
+    }
+    .cierre-heading {
+      font-family: var(--title);
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-weight: 700; color: var(--white); line-height: 1.2;
+      max-width: 680px; margin: 0 auto;
+    }
+    .cierre-heading em { color: var(--gold); font-style: normal; }
+    .cierre-rule {
+      width: 60px; height: 1px; background: var(--gold);
+      margin: 16px auto 0;
+    }
+
+    @media (max-width: 900px) {
+      .impact-grid { grid-template-columns: 1fr; }
+      .impact-card.highlight { grid-template-columns: 1fr; gap: 12px; }
+      .impacto-inner { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Sandhy González</a>
+  <ul class="nav-links">
+    <li><a href="#hero">Perfil</a></li>
+    <li><a href="#skills">Habilidades</a></li>
+    <li><a href="#experience">Experiencia</a></li>
+    <li><a href="#brands">Marcas</a></li>
+    <li><a href="#impacto-hero">Impacto</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-tag">Portafolio</div>
+      <div class="hero-rule"></div>
+      <h1 class="hero-name">
+        <span>SANDHY</span>
+        <span>GONZÁLEZ</span>
+      </h1>
+      <div class="hero-title">Marketing Content Manager</div>
+      <div class="hero-sub">Licenciada en Comunicación Social · Especialista en Periodismo Digital</div>
+
+      <div class="hero-stats">
+        <div class="stat-block">
+          <div class="stat-num">14</div>
+          <div class="stat-label">Años de<br>experiencia</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">9+</div>
+          <div class="stat-label">Gestión de marca<br>en 9 países</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">🏆</div>
+          <div class="stat-label">Premio Platino<br>Fintech 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-contact">
+      <div class="contact-item">
+        <span class="contact-icon">in</span>
+        <a href="https://www.linkedin.com/in/sandhy-gonzalez-periodista-digital/" target="_blank">linkedin.com/in/sandhy-gonzalez-periodista-digital</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📍</span>
+        <span>Caracas, Venezuela · Disponible para proyectos remotos</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="reveal">
+      <div class="section-label">Perfil Profesional</div>
+      <div class="section-rule"></div>
+      <p class="bio">Profesional con 14 años de experiencia creando estrategias de contenido que conectan con audiencias y generan resultados medibles. He liderado proyectos en medios, agencias y entidades públicas en LATAM y EE.UU., tanto en entornos B2B como B2C. Especialista en marketing de contenidos, SEO, campañas digitales y redes sociales con enfoque estratégico y orientado a datos. Mi filosofía: conectar con el público objetivo es la esencia.</p>
+    </div>
+
+    <div class="reveal">
+      <div class="section-label">Experiencia Destacada</div>
+      <div class="section-rule"></div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Marketing Content Manager</div>
+          <div class="exp-period">2022 – 2025</div>
+        </div>
+        <div class="exp-company">Fapro SpA</div>
+        <div class="exp-desc">Lideré estrategia y producción de contenido multiformato: blog, prensa, video, email, eBooks, casos de éxito. Premio Platino Fintech Americas 2024. Coordiné Fintech MeetUp 2022. Optimicé SEO, redes sociales y Google My Business.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Paid Social Media Manager</div>
+          <div class="exp-period">2021 – 2023</div>
+        </div>
+        <div class="exp-company">Agencia Eleva</div>
+        <div class="exp-desc">Diseñé y ejecuté campañas digitales y de Ads para marcas en 5 países con optimización continua basada en métricas. Gestioné comunidades y procesos comerciales clave.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Coordinadora de Relaciones Institucionales</div>
+          <div class="exp-period">2016 – 2020</div>
+        </div>
+        <div class="exp-company">Fundación TEVES</div>
+        <div class="exp-desc">Planifiqué estrategias comunicacionales internas y externas. Lideré coberturas, transmisiones exclusivas y giras de alcance nacional.</div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Periodista Web / Redactora</div>
+          <div class="exp-period">2013 – 2020</div>
+        </div>
+        <div class="exp-company">Telesur · Primicias24 · PropTech Latam</div>
+        <div class="exp-desc">Redacté contenidos especializados en fintech, proptech, política y cultura. Gestioné email marketing, SEO y redes sociales.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-heading">HABILIDADES &amp; <em>FORMACIÓN</em></h2>
+      <p class="section-intro">Competencias, certificaciones y formación académica</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Col 1 -->
+      <div class="skills-col reveal">
+        <div class="skills-col-title">Habilidades Clave</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Marketing de contenido estratégico</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Estrategia de optimización SEO</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Gestión de campañas digitales</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Paid Social Media (Meta, Google Ads)</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Email marketing</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Relaciones institucionales</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Comunicación estratégica</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Gestión de eventos</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Liderazgo y management</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Pensamiento analítico / data-driven</div>
+        <div class="skill-item"><span class="skill-dash">—</span> Copywriting & Storytelling</div>
+        <div class="skill-item"><span class="skill-dash">—</span> IA aplicada al marketing de contenidos</div>
+
+        <div class="skills-col-title" style="margin-top:28px">Idiomas</div>
+        <div class="lang-item">
+          <div class="lang-header"><span class="lang-name">Español</span><span class="lang-level">Nativo</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-header"><span class="lang-name">Inglés</span><span class="lang-level">Intermedio</span></div>
+          <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="skills-col reveal">
+        <div class="skills-col-title">Certificaciones</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Fundamentos de Marketing</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Content Marketing Avanzado</div>
+        <div class="cert-item"><span class="cert-check">✓</span> SEO Técnico</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Copywriting con Técnicas de Storytelling</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Inteligencia Artificial para Content Marketing</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Creación de Contenido con IA</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Email Marketing</div>
+        <div class="cert-item"><span class="cert-check">✓</span> Locución</div>
+
+        <div class="skills-col-title" style="margin-top:28px">Educación</div>
+        <div class="edu-item">
+          <div class="edu-degree">Especialización en Periodismo Digital</div>
+          <div class="edu-school">Universidad Monteávila</div>
+          <div class="edu-year">2017 – 2018</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Licenciada en Comunicación Social</div>
+          <div class="edu-school">Universidad Santa María · Mención: Comunicaciones Corporativas</div>
+          <div class="edu-year">2006 – 2011</div>
+        </div>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="skills-col reveal">
+        <div class="skills-col-title">Sectores de Experiencia</div>
+        <div class="sectors-grid">
+          <span class="sector-pill">Fintech / Banca Digital</span>
+          <span class="sector-pill">PropTech / Real Estate</span>
+          <span class="sector-pill">Salud</span>
+          <span class="sector-pill">Medios de comunicación</span>
+          <span class="sector-pill">Publicidad / Agencias</span>
+          <span class="sector-pill">Fundaciones / ONGs</span>
+          <span class="sector-pill">Educación / e-learning</span>
+          <span class="sector-pill">Entretenimiento / Cultura</span>
+        </div>
+
+        <div class="skills-col-title" style="margin-top:32px">Logros Destacados</div>
+        <div class="achievement">
+          <div class="achievement-title">🏆 Premio Platino Fintech Americas 2024</div>
+          <div class="achievement-desc">Pitch de postulación de mi autoría. Fapro SpA ganó el reconocimiento gracias a la estrategia de contenido y la gestión que lideré.</div>
+        </div>
+        <div class="achievement">
+          <div class="achievement-title">🌎 9 países en LATAM y EE.UU.</div>
+          <div class="achievement-desc">Campañas ejecutadas en Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, EE.UU. y Venezuela.</div>
+        </div>
+        <div class="achievement">
+          <div class="achievement-title">📱 5 países con campañas Ads</div>
+          <div class="achievement-desc">Gestión y optimización de campañas pagadas multi-mercado en Agencia Eleva.</div>
+        </div>
+        <div class="achievement">
+          <div class="achievement-title">📺 Cobertura internacional</div>
+          <div class="achievement-desc">Reportajes y coberturas para Telesur con audiencia digital global.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-heading">EXPERIENCIA <em>LABORAL</em></h2>
+      <p class="section-intro">Trayectoria profesional completa</p>
+    </div>
+
+    <div class="timeline">
+      <!-- LEFT COL -->
+      <div class="timeline-col left">
+        <div class="tl-item left">
+          <div class="tl-role">Marketing Content Manager</div>
+          <div class="tl-company">Fapro SpA</div>
+          <div class="tl-period">Jun 2022 – Jul 2025</div>
+          <div class="tl-desc">Lideré estrategia y producción de contenido multiformato: blog, prensa, video, email, eBooks, casos de éxito. Premio Platino Fintech Americas 2024. Coordiné Fintech MeetUp 2022. Optimicé SEO, GMB y Wikipedia corporativa.</div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-role">Coordinadora de Relaciones Institucionales</div>
+          <div class="tl-company">Fundación TEVES</div>
+          <div class="tl-period">Mar 2016 – Ene 2020</div>
+          <div class="tl-desc">Estrategias comunicacionales internas y externas. Relaciones con medios, eventos nacionales, transmisiones exclusivas y giras de alcance nacional.</div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-role">Periodista</div>
+          <div class="tl-company">Global Media Review</div>
+          <div class="tl-period">Nov 2019 – Feb 2020</div>
+          <div class="tl-desc">Artículos SEO-optimizados y campañas para patrocinio de influencers latinoamericanos.</div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-role">Especialista SEO</div>
+          <div class="tl-company">Más que Digital</div>
+          <div class="tl-period">Sep – Nov 2019</div>
+          <div class="tl-desc">Redacción y optimización SEO de blogs corporativos para posicionamiento orgánico.</div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-role">Redactora Web</div>
+          <div class="tl-company">Telesur</div>
+          <div class="tl-period">Jul 2015 – Feb 2016</div>
+          <div class="tl-desc">Reportajes y coberturas internacionales con enfoque analítico para audiencias digitales.</div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-role">Periodista Web</div>
+          <div class="tl-company">Almomento360</div>
+          <div class="tl-period">Nov 2013 – Ene 2014</div>
+          <div class="tl-desc">Contenidos informativos: actualidad, política y cultura nacional.</div>
+        </div>
+      </div>
+
+      <!-- CENTER LINE -->
+      <div class="timeline-line"></div>
+
+      <!-- RIGHT COL -->
+      <div class="timeline-col right">
+        <div class="tl-item right" style="margin-top:0">
+          <div class="tl-role">Paid Social Media Manager</div>
+          <div class="tl-company">Agencia Eleva</div>
+          <div class="tl-period">Mar 2021 – Oct 2023</div>
+          <div class="tl-desc">Campañas digitales y Ads para marcas en 5 países. Optimización continua por métricas. Gestión de comunidades y cuentas clave alineando marketing y ventas.</div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-role">Periodista Web</div>
+          <div class="tl-company">PropTech Latam</div>
+          <div class="tl-period">Ago – Dic 2020</div>
+          <div class="tl-desc">Artículos, entrevistas y contenidos especializados en proptech, blockchain y bienes raíces. Campañas de email marketing estratégico.</div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-role">Especialista de Proyectos Digitales</div>
+          <div class="tl-company">Yield Experiencias Digitales</div>
+          <div class="tl-period">Nov 2019</div>
+          <div class="tl-desc">Auditorías SEO y análisis de mercado para mejorar visibilidad y rendimiento digital.</div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-role">Social Media Manager</div>
+          <div class="tl-company">Tu Medico.com</div>
+          <div class="tl-period">Feb – Jun 2019</div>
+          <div class="tl-desc">Estrategia digital, redes sociales y captación de clientes en eventos del sector salud.</div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-role">Periodista Web</div>
+          <div class="tl-company">Primicias24</div>
+          <div class="tl-period">Ene 2014 – Jul 2015</div>
+          <div class="tl-desc">Noticias, entrevistas, redes sociales y contenido multimedia del medio.</div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-role">Community Manager</div>
+          <div class="tl-company">Vapro Publicidad</div>
+          <div class="tl-period">Ago – Oct 2013</div>
+          <div class="tl-desc">Redacción, programación y medición de contenidos para redes sociales.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-heading">MARCAS CON LAS QUE <em>HE TRABAJADO</em></h2>
+      <p class="section-intro">He colaborado con marcas de Argentina, Chile, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, EE.UU. y Venezuela.</p>
+    </div>
+
+    <div class="brands-grid reveal">
+      <div class="brand-pill">Fapro SpA</div>
+      <div class="brand-pill">Agencia Eleva</div>
+      <div class="brand-pill">PropTech Latam</div>
+      <div class="brand-pill">Tu Medico.com</div>
+      <div class="brand-pill">Yield Experiencias Digitales</div>
+      <div class="brand-pill">Más que Digital</div>
+      <div class="brand-pill">Telesur</div>
+      <div class="brand-pill">Primicias24</div>
+      <div class="brand-pill">Almomento360</div>
+      <div class="brand-pill">Vapro Publicidad</div>
+      <div class="brand-pill">Fundación TEVES</div>
+      <div class="brand-pill">Global Media Review</div>
+      <div class="brand-pill">AYCO Guatemala</div>
+      <div class="brand-pill">ESPAE Escuela de Negocios</div>
+    </div>
+
+    <div style="margin-top:40px" class="reveal">
+      <div class="section-label" style="margin-bottom:12px">Alcance Geográfico</div>
+      <div class="countries-grid">
+        <span class="country-pill">Venezuela</span>
+        <span class="country-pill">Chile</span>
+        <span class="country-pill">Argentina</span>
+        <span class="country-pill">Colombia</span>
+        <span class="country-pill">Costa Rica</span>
+        <span class="country-pill">Guatemala</span>
+        <span class="country-pill">El Salvador</span>
+        <span class="country-pill">Ecuador</span>
+        <span class="country-pill">EE.UU.</span>
+      </div>
+    </div>
+
+    <div class="premio-box reveal">
+      <div class="premio-title">🏆 Premio Platino — Fintech Americas 2024</div>
+      <p class="premio-text">Mi visión estratégica me permitió elevar el Brand Awareness de Fapro SpA y construir su autoridad de marca más allá de sus propios canales digitales. Estuve a cargo, tanto de la estrategia de contenido como del pitch de postulación que le otorgó a la marca este reconocimiento; una pieza clave donde sinteticé los hitos de nuestra gestión para asegurar un posicionamiento de alto impacto en la industria Fintech.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     IMPACTO
+═══════════════════════════════════════════════════════ -->
+
+<!-- IMPACTO HERO -->
+<section id="impacto-hero">
+  <div class="impacto-inner">
+    <div class="reveal">
+      <h2 class="section-heading">RESULTADOS, MÉTRICAS <em>&amp; LOGROS</em></h2>
+      <p class="section-intro">Muestra de gestión estratégica con resultados cuantificables</p>
+    </div>
+    <div class="section-rule reveal" style="margin-top:10px;margin-bottom:0;"></div>
+    <p class="page-title reveal">Transformando estrategia en revenue: Liderazgo de Marketing en ecosistemas B2B y B2C</p>
+    <p class="page-sub reveal">Una selección de evidencias de gestión: decisiones estratégicas, ejecución medible y resultados que hablan por sí solos.</p>
+  </div>
+</section>
+
+<!-- FAPRO SpA -->
+<section id="fapro">
+  <div class="container">
+    <div class="company-label reveal">
+      <h2 class="section-heading">AUTORIDAD DE MARCA <em>&amp; PIPELINE</em></h2>
+    </div>
+    <div class="section-rule"></div>
+    <div class="impact-grid">
+
+      <div class="impact-card highlight reveal">
+        <div class="highlight-icon">🏆</div>
+        <div>
+          <div class="card-kpi">El Hito</div>
+          <div class="card-headline">Winner Fintech Américas 2024</div>
+          <div class="card-text">Liderazgo y autoría del pitch ganador. Posicionamiento de marca a nivel regional ante los líderes de la industria.</div>
+        </div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">📈</span>
+        <div class="card-kpi">Demanda</div>
+        <div class="card-headline">Récord de MQLs &amp; Sales Pipeline</div>
+        <div class="card-text">Crecimiento sostenido trimestre a trimestre. Estrategia de contenidos enfocada en probabilidades de conversión directa para el equipo comercial.</div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">🔍</span>
+        <div class="card-kpi">Reach · SEO</div>
+        <div class="card-headline">SEO Score +80</div>
+        <div class="card-text">Escalabilidad orgánica y optimización de visibilidad digital en mercados competitivos.</div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">🤝</span>
+        <div class="card-kpi">Fidelidad</div>
+        <div class="card-headline">85% Attendance Rate</div>
+        <div class="card-text">Primer Meet Up histórico con asistencia récord de la cartera de clientes. Evento diseñado y ejecutado como estrategia de comunidad y retención.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AGENCIA ELEVA -->
+<section id="eleva">
+  <div class="container">
+    <div class="company-label reveal">
+      <h2 class="section-heading">PERFORMANCE <em>&amp; ROI</em></h2>
+    </div>
+    <div class="section-rule"></div>
+    <div class="impact-grid">
+
+      <div class="impact-card highlight reveal">
+        <div class="highlight-icon">💰</div>
+        <div>
+          <div class="card-kpi">KPI Ventas</div>
+          <div class="card-headline">+85% ROI</div>
+          <div class="card-text">Caso de éxito: Ayco Guatemala. Maximización de presupuesto para alcanzar metas de facturación con apoyo de estrategia social media.</div>
+        </div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">📣</span>
+        <div class="card-kpi">Escala</div>
+        <div class="card-headline">+80% Prospectos Mensuales</div>
+        <div class="card-text">Récord histórico de captación mediante optimización avanzada de Paid Media para los clientes Eleva.</div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">💬</span>
+        <div class="card-kpi">Comunidad</div>
+        <div class="card-headline">90% Engagement Rate</div>
+        <div class="card-text">Aceleración de interacciones en menos de 90 días para clientes multisectoriales. Estrategia de contenido orientada a la conversación y la conversión simultánea.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FUNDACIÓN TEVES -->
+<section id="teves">
+  <div class="container">
+    <div class="company-label reveal">
+      <h2 class="section-heading">OPERACIONES <em>&amp; LOGÍSTICA</em></h2>
+    </div>
+    <div class="section-rule"></div>
+    <div class="impact-grid">
+
+      <div class="impact-card highlight reveal">
+        <div class="highlight-icon">💻</div>
+        <div>
+          <div class="card-kpi">Transformación</div>
+          <div class="card-headline">Primera Intranet Institucional</div>
+          <div class="card-text">Arquitectura de procesos y digitalización de la comunicación interna.</div>
+        </div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">🗺️</span>
+        <div class="card-kpi">Logística</div>
+        <div class="card-headline">+18 Estados · Gira Exitosa</div>
+        <div class="card-text">Dirección operativa en gira Corazón Llanero 2017. Gestión de talento VIP y logística 360° al servicio del personal ejecutivo y operativo.</div>
+      </div>
+
+      <div class="impact-card reveal">
+        <span class="card-icon">📰</span>
+        <div class="card-kpi">Prensa &amp; PR</div>
+        <div class="card-headline">100% Media Coverage</div>
+        <div class="card-text">Estrategia de PR con seguimiento 1 a 1. Garantía de publicación y presencia en medios nacionales tras cada gestión.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE SLOGAN -->
+<section id="cierre">
+  <div class="container">
+    <div class="cierre-heading reveal">
+      Gestión operativa y estratégica<br>con resultados <em>cuantificables</em>
+    </div>
+    <div class="cierre-rule reveal"></div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="container">
+    <div class="contact-inner reveal">
+      <div class="contact-big" data-text="¡HABLEMOS!" style="font-size: 2.5rem !important;">¡HABLEMOS!</div>
+      <div class="contact-sub">Estoy lista para tu próximo proyecto o gestión de marca</div>
+      <div class="contact-rule"></div>
+
+      <div class="contact-grid">
+        <div class="contact-block">
+          <div class="contact-block-label">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/sandhy-gonzalez-periodista-digital/" target="_blank">linkedin.com/in/sandhy-gonzalez-periodista-digital</a>
+        </div>
+      </div>
+
+      <div class="contact-extra">
+        <p>Ubicación: <span>Caracas, Venezuela</span> · Disponible para proyectos remotos</p>
+      </div>
+
+      <div class="tagline">"Conectar con el público objetivo es la esencia."</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Sandhy J. González M. — Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal, .tl-item').forEach(el => observer.observe(el));
+
+  // Stagger timeline items
+  document.querySelectorAll('.tl-item').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 6) * 0.08}s`;
+  });
+</script>
+</body>
+</html>
